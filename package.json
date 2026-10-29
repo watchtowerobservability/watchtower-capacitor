@@ -18,5 +18,5 @@
     "@capacitor/core": ">=6",
     "@watchtowerobservability/browser": ">=0.1.0"
   },
-  "scripts": { "test": "node --test test/" }
+  "scripts": { "test": "node --test test/*.test.js" }
 }
