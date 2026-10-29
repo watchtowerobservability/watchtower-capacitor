@@ -1,0 +1,22 @@
+{
+  "name": "@watchtowerobservability/capacitor",
+  "version": "0.1.0",
+  "repository": { "type": "git", "url": "git+https://github.com/watchtowerobservability/watchtower-capacitor.git" },
+  "publishConfig": { "registry": "https://npm.pkg.github.com" },
+  "description": "Watchtower Capacitor plugin: browser SDK in the webview plus native iOS and Android SDKs (plain JavaScript)",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": ["src", "android", "ios", "Package.swift", "WatchtowerobservabilityCapacitor.podspec"],
+  "license": "Apache-2.0",
+  "engines": { "node": ">=18" },
+  "capacitor": {
+    "ios": { "src": "ios" },
+    "android": { "src": "android" }
+  },
+  "peerDependencies": {
+    "@capacitor/core": ">=6",
+    "@watchtowerobservability/browser": ">=0.1.0"
+  },
+  "scripts": { "test": "node --test test/" }
+}

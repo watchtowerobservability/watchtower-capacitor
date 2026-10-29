@@ -1,0 +1,11 @@
+{
+  "name": "wt-capacitor-example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@capacitor/core": "^6.0.0",
+    "@watchtowerobservability/browser": "^0.1.0",
+    "@watchtowerobservability/capacitor": "^0.1.0"
+  }
+}
