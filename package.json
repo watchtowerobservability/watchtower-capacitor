@@ -2,12 +2,20 @@
   "name": "@watchtowerobservability/capacitor",
   "version": "0.1.0",
   "repository": { "type": "git", "url": "git+https://github.com/watchtowerobservability/watchtower-capacitor.git" },
-  "publishConfig": { "registry": "https://npm.pkg.github.com" },
-  "description": "Watchtower Capacitor plugin: browser SDK in the webview plus native iOS and Android SDKs (plain JavaScript)",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "description": "Watchtower Capacitor plugin: browser SDK in the webview plus native iOS and Android SDKs",
   "type": "module",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
-  "files": ["src", "android", "ios", "Package.swift", "WatchtowerobservabilityCapacitor.podspec"],
+  "packageManager": "pnpm@11.2.2",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+  },
+  "files": ["dist", "android", "ios", "Package.swift", "WatchtowerobservabilityCapacitor.podspec"],
   "license": "Apache-2.0",
   "engines": { "node": ">=18" },
   "capacitor": {
@@ -18,5 +26,16 @@
     "@capacitor/core": ">=6",
     "@watchtowerobservability/browser": ">=0.1.0"
   },
-  "scripts": { "test": "node --test test/*.test.js" }
+  "scripts": {
+    "build": "node esbuild.config.mjs && tsgo -p tsconfig.build.json",
+    "typecheck": "tsgo --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@capacitor/core": "6.2.0",
+    "@types/node": "22.10.2",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "esbuild": "0.25.10",
+    "vitest": "5.0.5"
+  }
 }

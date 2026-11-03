@@ -4,12 +4,11 @@ One `init` for a Capacitor app: the [browser SDK](https://github.com/watchtowero
 in the webview (JS errors, vitals, sessions), and inside the iOS/Android shell the native
 [iOS](https://github.com/watchtowerobservability/watchtower-ios) and
 [Android](https://github.com/watchtowerobservability/watchtower-android) SDKs add native crashes, ANR/hangs and screenshot replay.
-Plain JavaScript with hand-written `.d.ts`.
+Written in TypeScript; the package ships ESM with type declarations.
 
 ## Install
 
 ```sh
-echo '@watchtowerobservability:registry=https://npm.pkg.github.com' >> .npmrc
 npm install @watchtowerobservability/capacitor @watchtowerobservability/browser
 npx cap sync
 ```
