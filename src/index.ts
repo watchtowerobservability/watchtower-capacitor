@@ -1,8 +1,8 @@
 import { Capacitor, registerPlugin } from "@capacitor/core";
 import * as browser from "@watchtowerobservability/browser";
-import { createWatchtower, type NativePlugin } from "./core";
+import { createWatchtower, type NativePlugin } from "./core.js";
 
-export type { InitOptions } from "./core";
+export type { InitOptions } from "./core.js";
 
 const wt = createWatchtower({ browser, plugin: registerPlugin<NativePlugin>("Watchtower"), isNative: Capacitor.isNativePlatform() });
 

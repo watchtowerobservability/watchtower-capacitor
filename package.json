@@ -1,7 +1,10 @@
 {
   "name": "@watchtowerobservability/capacitor",
-  "version": "0.1.1",
-  "repository": { "type": "git", "url": "git+https://github.com/watchtowerobservability/watchtower-capacitor.git" },
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watchtowerobservability/watchtower-capacitor.git"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -13,14 +16,29 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
   },
-  "files": ["dist", "android", "ios", "Package.swift", "WatchtowerobservabilityCapacitor.podspec"],
+  "files": [
+    "dist",
+    "android",
+    "ios",
+    "Package.swift",
+    "WatchtowerobservabilityCapacitor.podspec"
+  ],
   "license": "Apache-2.0",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "capacitor": {
-    "ios": { "src": "ios" },
-    "android": { "src": "android" }
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
   },
   "peerDependencies": {
     "@capacitor/core": ">=6",

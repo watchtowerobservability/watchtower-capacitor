@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { WatchtowerClient, WatchtowerConfig } from "@watchtowerobservability/browser";
-import { createWatchtower, type InitOptions } from "./core";
+import { createWatchtower, type InitOptions } from "./core.js";
 
 function fakes() {
   const calls: [string, unknown?][] = [];
